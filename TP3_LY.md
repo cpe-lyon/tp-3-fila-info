@@ -61,8 +61,49 @@ User@localhost:~$ sudo chmod 060 /home/infra
 User@localhost:~$ sudo chmod 750 /home/dev
 User@localhost:~$ sudo chmod 750 /home/infra
 ```
+### 9. 
+Oui car on est connecté en tant que root, et peut modifier le mot de passe.
 
-### 9. Oui on peut accèder à une session en tant qu'alice
+### 10. Activer le compte d'Alice
 ```console
 User@localhost:~$ sudo passwd alice
 User@localhost:~$ su alice
+```
+
+### 11. Obtenir l’uid et le gid de alice
+```console
+User@localhost:~$ id alice
+```
+
+### 12. Retrouver l’utilisateur dont l’uid est 1003
+```console
+User@localhost:~$ getent passwd 1003
+```
+### 13. Quel est l'id du group dev
+```console
+User@localhost:~$ grep dev /etc/group
+```
+
+### 14. Quel groupe a pour gid 1002 ?
+```console
+User@localhost:~$ grep 1002 /etc/group
+```
+
+### 15. Retirez l’utilisateur charlie du groupe infra
+```console
+sudo gpasswd - d charlie infra
+```
+Charlie n'a plus de droit pour le dossier infra.
+
+### 16. Modifiez le compte de dave 
+```console
+User@localhost:~$ sudo chage -E 2021-06-01 -m 90 -M 5 -W 14 -I 30 dave
+```
+### 17. 
+L'interprêteur de commande est **bash**.
+
+### 18. Rôle de Nobody
+Nobody n'appartient à aucun fichier, il n'est dans aucun groupe qui a des privilèges et dont les seules possibilités sont celles que tous les "autres utilisateurs" ont.
+
+### 19.
+Par défaut sudo le conserve pendant 15 mins.
