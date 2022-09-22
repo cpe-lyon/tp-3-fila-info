@@ -107,3 +107,9 @@ Nobody n'appartient à aucun fichier, il n'est dans aucun groupe qui a des privi
 
 ### 19.
 Par défaut sudo le conserve pendant 15 mins.
+
+# Exercice 2. Gestion des permissions
+
+1. 
+
+2. 
