@@ -110,6 +110,35 @@ Par défaut sudo le conserve pendant 15 mins.
 
 # Exercice 2. Gestion des permissions
 
-1. 
+### 1
+On a seulement le droit de lire si on n'est pas le propriétaire
+### 2  
+`sudo chmod 000 fichier.txt` On peut toujours l'ouvrir avec le root.
+### 3  
+Les droits concernants le fichier restent.
+### 4  
+On peut l'exécuter dans les 2 cas.
+### 5  
+On n'a pas le droit, ni d'afficher, ni exécuter vu que l'on est déjà à l'intérieur de celui-ci.  
+### 6  
+On utilise "chmod a-w sstest/", "chmod a-w nouveau"  
+### 7  
+Vu que l'on avait retiré le droit, on ne peut plus rentrer dans le dossier ni de modifier.
+### 8  
 
-2. 
+### 9  
+On redonne lke droit avec "chmod 755 fichier"
+
+### 10  
+On utilise il faut taper "umask 077"
+
+### 11  
+Pour les repertoirs un umask 266 et les fichiers un umask 022
+
+### 12  
+Pour les repertoirs un umask 057 et les fichiers un umask 046
+
+### 13  
+
+### 14
+/etc/passwd le peut être lu par tous.
